@@ -1,3 +1,4 @@
-FROM nginx:latest
-ADD villapage /usr/share/nginx/html
-EXPOSE 80
+FROM openjdk:17
+ADD https://referenceappslt.s3.ap-south-1.amazonaws.com/spring-petclinic-3.3.0-SNAPSHOT.jar /spring-petclinic-3.3.0-SNAPSHOT.jar
+EXPOSE 8080
+CMD java -jar /spring-petclinic-3.3.0-SNAPSHOT.jar
